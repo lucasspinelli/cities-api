@@ -2,6 +2,7 @@ package com.lucaslevi.citiesapi.distances;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,17 +21,17 @@ public class DistanceResource {
     }
 
     @GetMapping("/by-points")
-    public Double byPoints(@RequestParam (name = "from") final Long cityA,
+    public ResponseEntity byPoints(@RequestParam (name = "from") final Long cityA,
                            @RequestParam(name= "to") final Long cityB){
         log.info("byPoints");
-        return service.distanceByPointsInMiles(cityA, cityB);
+        return ResponseEntity.ok().body(service.distanceByPointsInMiles(cityA, cityB));
     }
 
     @GetMapping("/by-cube")
-    public Double byCube(@RequestParam (name = "from") final Long cityA,
+    public ResponseEntity byCube(@RequestParam (name = "from") final Long cityA,
                          @RequestParam(name= "to") final Long cityB){
         log.info("byCube");
-        return service.distanceByCubeInMeters(cityA, cityB);
+        return ResponseEntity.ok().body(service.distanceByCubeInMeters(cityA, cityB));
     }
 
 
