@@ -3,12 +3,12 @@ package com.lucaslevi.citiesapi.cities.Entity;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
+import org.springframework.data.geo.Point;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.awt.*;
 
 @Entity
 @Table(name = "cidade")
@@ -46,7 +46,7 @@ public class City {
         this.uf = uf;
         this.ibge = ibge;
         this.geolocation = geolocation;
-        //this.location = location;
+        this.location = location;
     }
 
     public Long getId() {
