@@ -20,14 +20,14 @@ public class DistanceService {
         this.cityRepository = cityRepository;
     }
 
-    public Double distanceByPointsInMiles(final Long city1, final Long city2) {
-        log.info("nativePostgresInMiles({}, {})", city1, city2);
-        return cityRepository.distanceByPoints(city1, city2);
+    public Double distanceByPointsInMiles(final Long cityA, final Long cityB) {
+        log.info("nativePostgresInMiles({}, {})", cityA, cityB);
+        return cityRepository.distanceByPoints(cityA, cityB);
     }
 
-    public Double distanceByCubeInMeters(Long city1, Long city2) {
-        log.info("distanceByCubeInMeters({}, {})", city1, city2);
-        final List<City> cities = cityRepository.findAllById((Arrays.asList(city1, city2)));
+    public Double distanceByCubeInMeters(Long cityA, Long cityB) {
+        log.info("distanceByCubeInMeters({}, {})", cityA, cityB);
+        final List<City> cities = cityRepository.findAllById((Arrays.asList(cityA, cityB)));
 
         Point p1 = cities.get(0).getLocation();
         Point p2 = cities.get(1).getLocation();
