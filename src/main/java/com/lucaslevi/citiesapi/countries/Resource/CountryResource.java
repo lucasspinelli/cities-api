@@ -1,8 +1,7 @@
-package com.lucaslevi.citiesapi;
+package com.lucaslevi.citiesapi.countries.Resource;
 
-import com.lucaslevi.citiesapi.countries.Country;
-import com.lucaslevi.citiesapi.repository.CountryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.lucaslevi.citiesapi.countries.Entity.Country;
+import com.lucaslevi.citiesapi.countries.repository.CountryRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
