@@ -1,6 +1,6 @@
-package com.lucaslevi.citiesapi.staties.Repository;
+package com.lucaslevi.citiesapi.states.Repository;
 
-import com.lucaslevi.citiesapi.staties.Entity.State;
+import com.lucaslevi.citiesapi.states.Entity.State;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface StateRepository extends JpaRepository<State, Long> {

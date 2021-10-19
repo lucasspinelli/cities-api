@@ -1,7 +1,7 @@
-package com.lucaslevi.citiesapi.staties.Resources;
+package com.lucaslevi.citiesapi.states.Resources;
 
-import com.lucaslevi.citiesapi.staties.Entity.State;
-import com.lucaslevi.citiesapi.staties.Repository.StateRepository;
+import com.lucaslevi.citiesapi.states.Entity.State;
+import com.lucaslevi.citiesapi.states.Repository.StateRepository;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/staties")
+@RequestMapping("/states")
 public class StateResource {
 
     private final StateRepository repository;
@@ -23,7 +23,7 @@ public class StateResource {
     }
 
     @GetMapping
-    public List<State> staties(){
+    public List<State> states(){
         return repository.findAll();
     }
 }

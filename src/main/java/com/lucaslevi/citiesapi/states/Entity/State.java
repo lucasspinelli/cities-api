@@ -1,4 +1,4 @@
-package com.lucaslevi.citiesapi.staties.Entity;
+package com.lucaslevi.citiesapi.states.Entity;
 
 import com.lucaslevi.citiesapi.countries.Entity.Country;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
